@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Users Profile</h1>
+
+{% for user in users %}
+      <p>Name: {{ profile.name }}</p>
+      <p>Age: {{ profile.age }}</p>
+      <p>Location: {{ profile.location }}</p>
+      <p>Occupation: {{ profile.occupation }}</p>
+      <p>Bio: {{ profile.bio }}</p>
+      {% endfor %}
+    
+    </div>
+  </div>
+
+  {% for photo in profile.photo_set.all %}
+  <img class="responsive-img card-panel" src="{{photo.url}}" alt="user photo">
+{% empty %}
+  <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+{% endfor %}
+
+
+<form action="{% url 'add_photo' profile.id %}" enctype="multipart/form-data" method="POST" alt="User Photo" class="card-panel">
+  {% csrf_token %}
+  <input type="file" name="photo-file">
+  <br><br>
+  <input type="submit" class="btn" value="Upload Photo">
+</form>  
+</div>
+
+{% endblock %}

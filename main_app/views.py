@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
+from django.views.generic import ListView, DetailView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 import os
@@ -33,9 +34,6 @@ def profile_detail(request, profile_id):
 
 @login_required
 def add_photo(request, profile_id):
-
-
-
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:
         s3 = boto3.client('s3')
@@ -44,7 +42,6 @@ def add_photo(request, profile_id):
             bucket = os.environ['S3_BUCKET']
             s3.upload_fileobj(photo_file, bucket, key)
             url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
-
             Photo.objects.create(url=url, profile_id=profile_id)
         except Exception as e:
             print('An error occurred uploading file to S3')

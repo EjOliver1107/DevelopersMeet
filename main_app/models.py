@@ -1,34 +1,61 @@
 from django.db import models
-from django.urls import reverse
-# from datetime import date
+from django.contrib.auth.models import User
+import uuid
+import datetime
+import os
 
-# from django.contrib.auth.models import User
-
-# profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
-
-# class Profile(models.Model):
-#     profile = models.OneToOneField(User, on_delete=models.CASCADE)
-#     favorite_color = models.CharField(max_length=50)
 
 class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, default='Tell us about yourself!', blank=False)
 
-  # define the fields/columns
-  name = models.CharField(max_length=100)
-  age = models.IntegerField()
-  location = models.CharField(max_length=100)
-  occupation = models.CharField(max_length=100)
-  bio = models.TextField(max_length=250)
+    LOOKING_FOR = (
+        ('MALE', 'Men'),
+        ('FEMALE', 'Women'),
+        ('BOTH', 'Both'),
+    )
 
-  def __str__(self):
-    return f'{self.name} ({self.id})'
+    ETHNICITY = (
+        ('WHITE', 'White'),
+        ('ASIAN: INDIAN', 'Asian: Indian'),
+        ('ASIAN: PAKISTANI', 'Asian: Pakistani'),
+        ('ASIAN: BANGLADESHI', 'Asian: Bangladeshi'),
+        ('ASIAN: CHINESE', 'Asian: Chinese'),
+        ('BLACK', 'Black'),
+        ('MIXED', 'Mixed'),
+        ('OTHER ETHNICITY', 'Other Ethnicity')
+    )
+    RELATIONSHIP_TYPE = (
+        ('RELATIONSHIP', 'relationship'),
+        ('SOMETHING CASUAL', 'something casual'),
+        ('DONT KNOW YET', 'dont know yet'),
+        ('MARRIAGE', 'marriage')
+    )
+    KIDS = (
+    ('WANT SOMEDAY', 'WANT SOMEDAY'),
+    ('DO NOT WANT', 'do not want'),
+    ('HAVE AND WANT MORE', 'have and want more'),
+    ('HAVE AND DO NOT WANT MORE', 'have and do not want more'),
+    ('NOT SURE YET', 'NOT SURE YET'),
+    )
+    GENDER = (
+        ("MALE", "Male"),
+        ("FEMALE", "Female"))
 
-  def get_absolute_url(self):
+    gender = models.CharField(choices=GENDER, default="MALE", max_length=6)
+    ethnicity = models.CharField(choices=ETHNICITY, default="WHITE", blank=False, max_length=100)
+    relationship_type = models.CharField(choices=RELATIONSHIP_TYPE, default="DONT KNOW YET", blank=False, max_length=100)
+    kids = models.CharField(choices=KIDS, default="NOT SURE YET", blank=False, max_length=100)
+    height = models.DecimalField(max_digits=10, default=180.34, decimal_places=2)
+    looking_for = models.CharField(choices=LOOKING_FOR, default='BOTH', blank=False, max_length=6)
+    location = models.CharField(max_length=100, default='', blank=False)
+    birth_date = models.DateField(null=True, default='1990-01-01', blank=True)
 
-    return reverse('index', kwargs={'profile_id': self.id})
+    def age(self):
+        return int((datetime.date.today() - self.birth_date).days / 365.25  )
 
 class Photo(models.Model):
   url = models.CharField(max_length=200)
   user = models.ForeignKey(Profile, on_delete=models.CASCADE)
-
   def __str__(self):
     return f'Photo for profile_id: {self.profile_id} at url: {self.url}'

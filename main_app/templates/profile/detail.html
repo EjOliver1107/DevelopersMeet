@@ -3,7 +3,7 @@
 
 <h1>Users Profile</h1>
 
-{% for user in users %}
+{% for profile in profiles %}
       <p>Name: {{ profile.name }}</p>
       <p>Age: {{ profile.age }}</p>
       <p>Location: {{ profile.location }}</p>
@@ -14,14 +14,14 @@
     </div>
   </div>
 
-  {% for photo in profile.photo_set.all %}
-  <img class="responsive-img card-panel" src="{{photo.url}}" alt="user photo">
+  {% for photo in user.photo_set.all %}
+  <img class="responsive-img card-panel" src="{{users.url}}" alt="user photo">
 {% empty %}
   <div class="card-panel teal-text center-align">No Photos Uploaded</div>
 {% endfor %}
 
 
-<form action="{% url 'add_photo' profile.id %}" enctype="multipart/form-data" method="POST" alt="User Photo" class="card-panel">
+<form action="{% url 'add_photo' user.id %}" enctype="multipart/form-data" method="POST" alt="User Photo" class="card-panel">
   {% csrf_token %}
   <input type="file" name="photo-file">
   <br><br>

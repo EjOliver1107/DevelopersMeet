@@ -100,5 +100,5 @@ class Profile(models.Model):
     is_premium = models.BooleanField(default=False)
     is_verified = models.CharField(choices=APPROVAL, default="TO BE APPROVED", blank=False, max_length=14)
 
-    def age(self):
-        return int((datetime.date.today() - self.birth_date).days / 365.25  )
+    # def age(self):
+    #     return int((datetime.date.today() - self.birth_date).days / 365.25  )

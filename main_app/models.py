@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 # from datetime import date
+
 from django.contrib.auth.models import Profile
 
 # profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
@@ -10,6 +11,7 @@ from django.contrib.auth.models import Profile
 #     favorite_color = models.CharField(max_length=50)
 
 class Profile(models.Model):
+
   # define the fields/columns
   name = models.CharField(max_length=100)
   age = models.IntegerField()
@@ -21,6 +23,7 @@ class Profile(models.Model):
     return f'{self.name} ({self.id})'
 
   def get_absolute_url(self):
+
     return reverse('index', kwargs={'profile_id': self.id})
 
 class Photo(models.Model):

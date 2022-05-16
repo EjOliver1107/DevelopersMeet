@@ -5,7 +5,11 @@ from django.contrib.auth.decorators import login_required
 import os
 import uuid
 import boto3
+
 from .models import Profile, Photo
+
+
+
 
 # Create your views here.
 
@@ -16,6 +20,7 @@ def about(request):
     return render(request, 'about.html')
 
 @login_required
+
 def profile_index(request):
     profile = Profile.objects.all()
     return render(request, 'profile/index.html', { 'profile': profile })
@@ -28,6 +33,9 @@ def profile_detail(request, profile_id):
 
 @login_required
 def add_photo(request, profile_id):
+
+
+
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:
         s3 = boto3.client('s3')
@@ -36,6 +44,7 @@ def add_photo(request, profile_id):
             bucket = os.environ['S3_BUCKET']
             s3.upload_fileobj(photo_file, bucket, key)
             url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
+
             Photo.objects.create(url=url, profile_id=profile_id)
         except Exception as e:
             print('An error occurred uploading file to S3')
@@ -47,8 +56,10 @@ def signup(request):
   if request.method == 'POST':
     form = UserCreationForm(request.POST)
     if form.is_valid():
+
       profile = form.save()
       login(request, profile)
+
       return redirect('about')
     else:
       error_message = 'Invalid sign up - Try Again'

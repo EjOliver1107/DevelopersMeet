@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 # from datetime import date
 
-from django.contrib.auth.models import Profile
+# from django.contrib.auth.models import User
 
 # profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 

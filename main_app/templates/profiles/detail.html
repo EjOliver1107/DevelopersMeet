@@ -3,14 +3,16 @@
 
 <h1>Users Profile</h1>
 
-{% for profile in profiles %}
       <p>Name: {{ profile.user }}</p>
       <p>Age: {{ profile.birth_date }}</p>
       <p>Location: {{ profile.location }}</p>
       <p>Gender: {{ profile.gender }}</p>
       <p>Bio: {{ profile.bio }}</p>
-      {% endfor %}
-    
+
+    </div>
+    <div class="card-action">
+      <a href="{% url 'profiles_update' profile.id %}">Edit</a>
+      <a href="{% url 'profiles_delete' profile.id %}">Delete</a>
     </div>
   </div>
 
@@ -19,8 +21,6 @@
 {% empty %}
   <div class="card-panel teal-text center-align">No Photos Uploaded</div>
 {% endfor %}
-
-
 <form action="{% url 'add_photo' user.id %}" enctype="multipart/form-data" method="POST" alt="User Photo" class="card-panel">
   {% csrf_token %}
   <input type="file" name="photo-file">
@@ -29,9 +29,5 @@
 </form>  
 </div>
 
-<script>
-  const selectEl = document.getElementById('id_gender');
-  M.FormSelect.init(selectEl);
-</script>
 
 {% endblock %}

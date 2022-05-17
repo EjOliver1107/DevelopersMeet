@@ -1,10 +1,10 @@
-from django import forms
+
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 import uuid
 import datetime
 import os
-
 
 class Profile(models.Model):
     user = models.TextField(max_length=20, blank=False )
@@ -20,6 +20,10 @@ class Profile(models.Model):
 
     def age(self):
         return int((datetime.date.today() - self.birth_date).days / 365.25  )
+    
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'profile_id': self.id})
+        
 
 class Photo(models.Model):
   url = models.CharField(max_length=200)

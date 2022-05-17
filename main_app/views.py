@@ -35,12 +35,12 @@ def profile_detail(request, profile_id):
          })
     
 class ProfileCreate(LoginRequiredMixin, CreateView):
-   
     model = Profile
     fields = ['user', 'bio', 'gender', 'ethnicity', 'relationship_type', 'kids', 'height', 'looking_for', 'location', 'birth_date']
     def form_valid(self,form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+       
 
 class ProfileUpdate(LoginRequiredMixin, UpdateView):
     model = Profile

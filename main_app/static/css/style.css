@@ -1,0 +1,30 @@
+body {
+    background-color:#383838;
+    color: #CDBE78;
+}
+h1 {
+    text-align: center;
+}
+.card-content {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav-wrapper {
+    background-color: #066163;
+
+}
+.page-footer {
+    background-color: #066163;
+}
+nav .brand-logo{
+    color: #CDBE78;
+}
+nav ul a {
+    color: #CDBE78;
+}
+.right {
+    color: #CDBE78;
+}

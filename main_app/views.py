@@ -5,9 +5,9 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-import os
 import uuid
 import boto3
+import os
 
 from .models import Profile, Photo
 
@@ -64,7 +64,7 @@ def add_photo(request, profile_id):
         except Exception as e:
             print('An error occurred uploading file to S3')
             print(e)
-    return redirect('/profiles/', profile_id=profile_id)
+    return redirect('detail', profile_id=profile_id)
 
 def signup(request):
   error_message = ''

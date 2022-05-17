@@ -34,9 +34,8 @@ def profile_detail(request, profile_id):
          'profile': profile
          })
     
-
-
 class ProfileCreate(LoginRequiredMixin, CreateView):
+   
     model = Profile
     fields = ['user', 'bio', 'gender', 'ethnicity', 'relationship_type', 'kids', 'height', 'looking_for', 'location', 'birth_date']
     def form_valid(self,form):

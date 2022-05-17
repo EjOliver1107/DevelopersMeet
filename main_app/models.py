@@ -6,8 +6,6 @@ import os
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.TextField(max_length=500, default='Tell us about yourself!', blank=False)
 
     LOOKING_FOR = (
         ('MALE', 'Men'),
@@ -21,6 +19,7 @@ class Profile(models.Model):
         ('ASIAN: PAKISTANI', 'Asian: Pakistani'),
         ('ASIAN: BANGLADESHI', 'Asian: Bangladeshi'),
         ('ASIAN: CHINESE', 'Asian: Chinese'),
+        ('FILIPINO', 'FILIPINO'),
         ('BLACK', 'Black'),
         ('MIXED', 'Mixed'),
         ('OTHER ETHNICITY', 'Other Ethnicity')
@@ -41,7 +40,9 @@ class Profile(models.Model):
     GENDER = (
         ("MALE", "Male"),
         ("FEMALE", "Female"))
-
+    
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, default='Tell us about yourself!', blank=False)
     gender = models.CharField(choices=GENDER, default="MALE", max_length=6)
     ethnicity = models.CharField(choices=ETHNICITY, default="WHITE", blank=False, max_length=100)
     relationship_type = models.CharField(choices=RELATIONSHIP_TYPE, default="DONT KNOW YET", blank=False, max_length=100)

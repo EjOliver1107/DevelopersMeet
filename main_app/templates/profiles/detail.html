@@ -2,14 +2,19 @@
 {% block content %}
 
 <h1>Users Profile</h1>
+<div>
+  <div>
 
-{% for profile in profiles %}
-      <p>Name: {{ profile.name }}</p>
-      <p>Age: {{ profile.age }}</p>
+      <p>Name: {{ profile.user }}</p>
+      <p>Age: {{ profile.birth_date }}</p>
+      <p>Gender: {{ profile.gender }}</p>
       <p>Location: {{ profile.location }}</p>
-      <p>Occupation: {{ profile.occupation }}</p>
+      <p>Ethnicity: {{ profile.ethnicity }}</p>
+      <p>height: {{ profile.height }}</p>
+      <p>Looking For: {{ profile.looking_for }}</p>
+      <p>Relationship Goal: {{ profile.relationship_type }}</p>
+      <p>Kids?: {{ profile.kids }}</p>
       <p>Bio: {{ profile.bio }}</p>
-      {% endfor %}
     
     </div>
   </div>
@@ -28,5 +33,10 @@
   <input type="submit" class="btn" value="Upload Photo">
 </form>  
 </div>
+
+<script>
+  const selectEl = document.getElementById('id_gender');
+  M.FormSelect.init(selectEl);
+</script>
 
 {% endblock %}

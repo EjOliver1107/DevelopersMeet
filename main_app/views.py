@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
+from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 import os
 import uuid
 import boto3
@@ -21,16 +23,32 @@ def about(request):
     return render(request, 'about.html')
 
 @login_required
-
 def profile_index(request):
-    profile = Profile.objects.all()
-    return render(request, 'profile/index.html', { 'profile': profile })
+    profiles = Profile.objects.all()
+    return render(request, 'profiles/index.html', { 'profiles': profiles })
 
 @login_required
 def profile_detail(request, profile_id):
     profile = Profile.objects.get(id=profile_id)
-    return render(request, 'profile/detail.html', { 'profile': profile })
+    return render(request, 'profiles/detail.html', {
+         'profile': profile
+         })
     
+class ProfileCreate(LoginRequiredMixin, CreateView):
+    model = Profile
+    fields = ['user', 'bio', 'gender', 'ethnicity', 'relationship_type', 'kids', 'height', 'looking_for', 'location', 'birth_date']
+    def form_valid(self,form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+       
+
+class ProfileUpdate(LoginRequiredMixin, UpdateView):
+    model = Profile
+    fields = ['bio', 'gender', 'ethnicity', 'relationship_type', 'kids', 'looking_for', 'location']
+
+class ProfileDelete(LoginRequiredMixin, DeleteView):
+    model = Profile
+    success_url = '/profiles/'
 
 @login_required
 def add_photo(request, profile_id):
@@ -46,7 +64,7 @@ def add_photo(request, profile_id):
         except Exception as e:
             print('An error occurred uploading file to S3')
             print(e)
-    return redirect('/profile/', profile_id=profile_id)
+    return redirect('/profiles/', profile_id=profile_id)
 
 def signup(request):
   error_message = ''
@@ -54,10 +72,10 @@ def signup(request):
     form = UserCreationForm(request.POST)
     if form.is_valid():
 
-      profile = form.save()
-      login(request, profile)
+      user = form.save()
+      login(request, user)
 
-      return redirect('about')
+      return redirect('index')
     else:
       error_message = 'Invalid sign up - Try Again'
   form = UserCreationForm()

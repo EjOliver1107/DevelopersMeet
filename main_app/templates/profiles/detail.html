@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Users Profile</h1>
+{% if user == profile.user %}
+  <h1>My Profile</h1>
+{% else %}
+  <h1>{{ profile.user }}'s Profile</h1>
+{% endif %}
 <div>
-  <div>
-
-      <p>Name: {{ profile.user }}</p>
+  <div>     
       <p>Age: {{ profile.birth_date }}</p>
       <p>Gender: {{ profile.gender }}</p>
       <p>Location: {{ profile.location }}</p>
@@ -15,28 +17,28 @@
       <p>Relationship Goal: {{ profile.relationship_type }}</p>
       <p>Kids?: {{ profile.kids }}</p>
       <p>Bio: {{ profile.bio }}</p>
-
-
     </div>
+    {% if profile.user == user %}
     <div class="card-action">
       <a href="{% url 'profiles_update' profile.id %}">Edit</a>
       <a href="{% url 'profiles_delete' profile.id %}">Delete</a>
-
-    
     </div>
+    {% endif %}
   </div>
 
   {% for photo in profile.photo_set.all %}
   <img class="responsive-img card-panel" src="{{photo.url}}" alt="Profile photo">
-{% empty %}
+  {% empty %}
   <div class="card-panel teal-text center-align">No Photos Uploaded</div>
-{% endfor %}
-<form action="{% url 'add_photo' %}" enctype="multipart/form-data" method="POST" alt="User Photo" class="card-panel">
+  {% endfor %}
+  {% if profile.user == user %}
+  <form action="{% url 'add_photo' %}" enctype="multipart/form-data" method="POST" alt="User Photo" class="card-panel">
   {% csrf_token %}
   <input type="file" name="photo-file">
   <br><br>
   <input type="submit" class="btn" value="Upload Photo">
 </form>  
+  {% endif %}
 </div>
 
 

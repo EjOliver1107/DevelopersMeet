@@ -9,7 +9,7 @@ import uuid
 import boto3
 import os
 
-from .models import Profile, Photo
+from .models import Profile, Photo, Match
 
 
 
@@ -34,6 +34,13 @@ def profile_detail(request, profile_id):
     return render(request, 'profiles/detail.html', {
          'profile': profile
          })
+
+@login_required
+def my_profile(request):
+    profile = Profile.objects.get(user=request.user)
+    return render(request, 'profiles/detail.html', {
+        'profile': profile
+    })
     
 class ProfileCreate(LoginRequiredMixin, CreateView):
     model = Profile

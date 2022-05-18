@@ -11,7 +11,7 @@ class Profile(models.Model):
     ethnicity = models.TextField(default="WHITE", blank=False, max_length=20)
     relationship_type = models.TextField(default="DONT KNOW YET", blank=False, max_length=100)
     kids = models.TextField(default="NOT SURE YET", blank=False, max_length=100)
-    height = models.DecimalField(max_digits=10, default=180.34, decimal_places=2)
+    height = models.IntegerField()
     looking_for = models.TextField(default='BOTH', blank=False, max_length=6)
     location = models.TextField(max_length=100, default='', blank=False)
     birth_date = models.DateField(null=True, default='1990-01-01', blank=True)

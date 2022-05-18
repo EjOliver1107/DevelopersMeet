@@ -13,4 +13,6 @@ urlpatterns = [
     path('profiles/<int:pk>/delete/', views.ProfileDelete.as_view(), name='profiles_delete'),
     path('accounts/signup/', views.signup, name='signup'),
     path('profiles/add_photo/', views.add_photo, name='add_photo'),
+    path('profiles/my/', views.my_profile, name='my_profile'),
+    
 ]

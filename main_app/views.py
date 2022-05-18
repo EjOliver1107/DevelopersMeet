@@ -14,6 +14,7 @@ from .models import Profile, Photo
 
 
 
+
 # Create your views here.
 
 def home(request):
@@ -62,8 +63,8 @@ def add_photo(request, profile_id):
             url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
             Photo.objects.create(url=url, profile_id=profile_id)
         except Exception as e:
-            print('An error occurred uploading file to S3')
-            print(e)
+          print('An error occurred uploading file to S3')
+          print(e)
     return redirect('detail', profile_id=profile_id)
 
 def signup(request):

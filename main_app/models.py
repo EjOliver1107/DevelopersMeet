@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 import datetime
 
 class Profile(models.Model):
-    user = models.TextField(max_length=20, blank=False )
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, default='Tell us about yourself!', blank=False)
     gender = models.TextField(max_length=20,)
     ethnicity = models.TextField(default="WHITE", blank=False, max_length=20)

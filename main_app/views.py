@@ -37,7 +37,7 @@ def profile_detail(request, profile_id):
     
 class ProfileCreate(LoginRequiredMixin, CreateView):
     model = Profile
-    fields = ['user', 'bio', 'gender', 'ethnicity', 'relationship_type', 'kids', 'height', 'looking_for', 'location', 'birth_date']
+    fields = ['bio', 'gender', 'ethnicity', 'relationship_type', 'kids', 'height', 'looking_for', 'location', 'birth_date']
     def form_valid(self,form):
         form.instance.user = self.request.user
         return super().form_valid(form)
@@ -52,7 +52,7 @@ class ProfileDelete(LoginRequiredMixin, DeleteView):
     success_url = '/profiles/'
 
 @login_required
-def add_photo(request, profile_id):
+def add_photo(request):
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:
         s3 = boto3.client('s3')
@@ -61,11 +61,11 @@ def add_photo(request, profile_id):
             bucket = os.environ['S3_BUCKET']
             s3.upload_fileobj(photo_file, bucket, key)
             url = f"{os.environ['S3_BASE_URL']}{bucket}/{key}"
-            Photo.objects.create(url=url, profile_id=profile_id)
+            Photo.objects.create(url=url, profile_id=request.user.profile.id)
         except Exception as e:
           print('An error occurred uploading file to S3')
           print(e)
-    return redirect('detail', profile_id=profile_id)
+    return redirect('detail', profile_id=request.user.profile.id)
 
 def signup(request):
   error_message = ''

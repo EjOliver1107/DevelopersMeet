@@ -36,8 +36,8 @@ Developers Meet App
     <a href="https://github.com/Hernandez-G" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/Hernandez-G-darkgreen?style=flat&logo=medium"/>
    </a>
-   <a href="https://www.linkedin.com/in/gaby-hernandez-a49616235/" target="_blank">
-      <img src="https://img.shields.io/badge/-https://www.linkedin.com/in/gaby-hernandez-a49616235/-blue?style=flat&``logo=Linkedin&logoColor=white">
+   <a href="www.linkedin.com/in/gabyhernandez3" target="_blank">
+      <img src="https://img.shields.io/badge/-www.linkedin.com/in/gabyhernandez3-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
    <a href="Hernandez2gab@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-Hernandez2gab@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">

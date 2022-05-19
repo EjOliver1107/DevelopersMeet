@@ -94,7 +94,8 @@ nav ul a {
     justify-content: space-evenly;
     bottom: 0;
     position: relative;
-    gap: 20px
+    gap: 20px;
+    color:#5F7161;
 }
 .page-footer {
     bottom: 0;

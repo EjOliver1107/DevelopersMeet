@@ -1,5 +1,8 @@
+<div align="center">
+   <img width="1059" alt="Screen Shot 2022-05-19 at 7 10 17 PM" src="https://user-images.githubusercontent.com/101842750/169418819-3b684ca7-b704-4fc1-bdb1-b235b6f0ab64.png">
+   <h1 align="center"></h1>
+</div>
 
-Developers Meet App
 
 <div align="center">
    <h1>:cupid: :heart_eyes: Developers Meet App :cupid: :heart_eyes: </h1>

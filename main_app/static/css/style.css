@@ -16,9 +16,6 @@ h1 {
     background-color: #066163;
 
 }
-.page-footer {
-    background-color: #066163;
-}
 nav .brand-logo{
     color: #CDBE78;
 }
@@ -28,3 +25,77 @@ nav ul a {
 .right {
     color: #CDBE78;
 }
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgb(0,0,0,0.4);
+    animation: fadeIn ease 3s;
+  
+  }
+  .modal-content {
+      background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px 20px 40px 40px;
+    border: 5px solid white;
+    border-radius: 25px;
+    width: 200px;
+    background-image: linear-gradient(to right, #be97be, #b8e2e0);
+    
+}
+
+.home {
+    display: flex ;
+    justify-content: center; 
+    padding: 500px ;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4) url("https://media.xogrp.com/images/39e394e8-68f4-45cc-8f75-df150fbc01dc~rt_0-cr_6.204.1242.822?compress=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0px;
+    top: 64px;
+    color:white;
+    font-size: 100px;
+    background-blend-mode: darken;
+}
+
+.home h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .11em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+.examples {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    bottom: 0;
+    position: relative;
+    gap: 20px
+}
+.page-footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #066163;
+
+}
+
+@keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }

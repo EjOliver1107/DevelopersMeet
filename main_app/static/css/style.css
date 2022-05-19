@@ -6,25 +6,98 @@ h1 {
     text-align: center;
 }
 
-/* the cards on the home page */
-
-.card-content {
+/* start */
+.card {
+    background-color: #708572;
+    max-height: 250px;
+    border: 1px solid #ddd;
     display: flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    overflow-x: auto;
+  }
+  
+  .card-body {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      /* animation: slider 15s infinite; */
+
+      
+  }
+  .card-body1 {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      /* animation: slider 15s infinite; */
+
+  }
+  .card-body2 {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      /* animation: slider 15s infinite; */
+
+  }
+  
+  .card .card-title {
+      margin: 24px;
+      font-size: 24px;
+      font-weight: bold;
+  }
+  
+  p.card-text {
+      margin: 34px;
+  }
+
+/* slide function to examples */
+.examples {
+    position: relative;
+    width: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+  
 }
 
-.card .card-title {
-    margin: 24px;
-    font-size: 24px;
-    font-weight: bold;
+.examples .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+.examples .card #slide {
+    position: relative;
+    width: auto;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    animation: slider 15s infinite;
+
+}
+.examples .card .card-title #slide {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  animation-delay: 4s
 }
 
-p.card-text {
-    margin: 34px;
+@keyframes slider {
+    0%, 25%, 100%{left: 0}
+    
+    30%, 55%{left: -100%}
+    
+    60%, 85%{left: -200%}
 }
+
+/* end */
 
 .nav-wrapper {
     background-color: #6d8b74;
@@ -36,7 +109,10 @@ nav ul a {
     color: #D0C9C0;;
 }
 .right {
-    color: #D0C9C0;}
+    color: #D0C9C0;
+}
+
+
 .modal {
     display: block;
     position: fixed;
@@ -87,7 +163,7 @@ nav ul a {
       typing 3.5s steps(40, end),
       blink-caret .75s step-end infinite;
 }
-.examples {
+/* .examples {
     height:24rem;
     display: flex;
     flex-direction: row;
@@ -96,7 +172,8 @@ nav ul a {
     position: relative;
     gap: 20px;
     color:#5F7161;
-}
+} */
+
 .page-footer {
     bottom: 0;
     position: fixed;

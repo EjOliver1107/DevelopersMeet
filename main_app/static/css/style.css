@@ -6,7 +6,12 @@ h1 {
     text-align: center;
 }
 
-/* start */
+#signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 200px 200px 200px;
+}
 .card {
     background-color: #708572;
     max-height: 250px;

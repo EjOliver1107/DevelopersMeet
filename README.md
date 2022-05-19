@@ -121,7 +121,7 @@ Screenshots
 
 <details open>   
 <summary>Deployed Link (Heroku)</summary>
-<a href="https://developersmeet-sei.herokuapp.com/">https://meetyourclassmates.herokuapp.com/</a>
+<a href="https://developersmeet-sei.herokuapp.com/">https://developersmeet-sei.herokuapp.com</a>
 </details>
 
 ## :fast_forward: Next Steps   

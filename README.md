@@ -45,7 +45,7 @@ Developers Meet App
 </div>
 
 <h1>:pencil: Description</h1>
-<p>Developers Meet App is a app to meet your future partner with common traits to better the odds of finding exactly what you're looking for.
+<p>Developers Meet App is a dating app created to meet your future partner with common traits to better the odds of finding exactly what you're looking for.
 
 Screenshots
 

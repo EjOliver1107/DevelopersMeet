@@ -9,7 +9,8 @@ import uuid
 import boto3
 import os
 
-from .models import Profile, Photo, Match
+from .models import Profile, Photo
+from .forms import CommentForm
 
 
 
@@ -31,8 +32,14 @@ def profile_index(request):
 @login_required
 def profile_detail(request, profile_id):
     profile = Profile.objects.get(id=profile_id)
+    comment_form = CommentForm(initial={
+        'user': request.user
+    }) 
+    comments = profile.comment_set.all().values_list('id')
     return render(request, 'profiles/detail.html', {
-         'profile': profile
+         'profile': profile,
+         'comment_form': comment_form,
+         'comments': comments
          })
 
 @login_required
@@ -57,6 +64,21 @@ class ProfileUpdate(LoginRequiredMixin, UpdateView):
 class ProfileDelete(LoginRequiredMixin, DeleteView):
     model = Profile
     success_url = '/profiles/'
+
+
+@login_required
+def add_comment(request, profile_id):
+  form = CommentForm(request.POST, initial={
+      'user': request.user.id
+  })
+  print(form.errors)
+  if form.is_valid():
+    profile = Profile.objects.get(id = profile_id)
+    new_comment = form.save(commit=False)
+    new_comment.profile = profile
+    # print('new_comment')
+    new_comment.save()
+  return redirect('detail', profile_id=profile_id)
 
 @login_required
 def add_photo(request):

@@ -14,5 +14,5 @@ urlpatterns = [
     path('accounts/signup/', views.signup, name='signup'),
     path('profiles/add_photo/', views.add_photo, name='add_photo'),
     path('profiles/my/', views.my_profile, name='my_profile'),
-    
+    path('profiles/<int:profile_id>/add_comment', views.add_comment, name='add_comment'),
 ]

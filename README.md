@@ -5,41 +5,41 @@ Developers Meet App
    <h1>:cupid: :heart_eyes: Developers Meet App :cupid: :heart_eyes: </h1>
    <h3>https://developersmeet-sei.herokuapp.com</h3>
    <h5>EJ Oliver | Sophia Best | Scott Mansfield | Gaby Hernandez </h5>                             
- <a href="https://yourportfoliolink.com" target="_blank">
+ <a href="https://github.com/EjOliver1107" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:https://github.com/EjOliver1107-darkgreen?style=flat&logo=medium"/>
    </a>
-   <a href="https://www.linkedin.com/in/user/" target="_blank">
+   <a href="https://www.linkedin.com/in/eldrickoliver/" target="_blank">
       <img src="https://img.shields.io/badge/-https://www.linkedin.com/in/eldrickoliver/-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
-   <a href="mailto:user@gmail.com" target="_blank">
+   <a href="ej.oliver1107@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-ej.oliver1107@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
-   <a href="https://yourportfoliolink.com" target="_blank">
+   <a href="https://github.com/sophiabest" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:https://github.com/sophiabest-darkgreen?style=flat&logo=medium"/>
    </a>
  
-   <a href="https://www.linkedin.com/in/user/" target="_blank">
+   <a href="https://www.linkedin.com/in/sophiabest/" target="_blank">
       <img src="https://img.shields.io/badge/-https://www.linkedin.com/in/sophiabest/-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
-   <a href="mailto:user@gmail.com" target="_blank">
+   <a href="bestsophia1014@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-bestsophia1014@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
-   <a href="https://yourportfoliolink.com" target="_blank">
+   <a href="https://github.com/smansfield5-darkgreen" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/smansfield5-darkgreen?style=flat&logo=medium"/>
    </a>
-   <a href="https://www.linkedin.com/in/user/" target="_blank">
+   <a href="https://www.linkedin.com/in/scottcmansfield/" target="_blank">
       <img src="https://img.shields.io/badge/-https://www.linkedin.com/in/scottcmansfield/-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
-   <a href="mailto:user@gmail.com" target="_blank">
+   <a href="scottapps07@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-scottapps07@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
-    <a href="https://yourportfoliolink.com" target="_blank">
+    <a href="https://github.com/Hernandez-G" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/Hernandez-G-darkgreen?style=flat&logo=medium"/>
    </a>
-   <a href="https://www.linkedin.com/in/user/" target="_blank">
+   <a href="https://www.linkedin.com/in/gaby-hernandez-a49616235/" target="_blank">
       <img src="https://img.shields.io/badge/-https://www.linkedin.com/in/gaby-hernandez-a49616235/-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
-   <a href="mailto:user@gmail.com" target="_blank">
+   <a href="Hernandez2gab@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-Hernandez2gab@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
 </div>

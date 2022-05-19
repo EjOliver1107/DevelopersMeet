@@ -37,7 +37,7 @@ Developers Meet App
    </a>
    <br/>
     <a href="https://github.com/Hernandez-G" target="_blank">
-      <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/Hernandez-G-darkgreen?style=flat&logo=medium"/>
+      <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/HernandezG-darkgreen?style=flat&logo=medium"/>
    </a>
    <a href="www.linkedin.com/in/gabyhernandez3" target="_blank">
       <img src="https://img.shields.io/badge/-www.linkedin.com/in/gabyhernandez3-blue?style=flat&``logo=Linkedin&logoColor=white">

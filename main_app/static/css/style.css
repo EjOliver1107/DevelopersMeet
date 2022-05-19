@@ -5,6 +5,9 @@ body {
 h1 {
     text-align: center;
 }
+
+/* the cards on the home page */
+
 .card-content {
     display: flex;
     text-align: center;
@@ -12,6 +15,17 @@ h1 {
     flex-direction: column;
     justify-content: center;
 }
+
+.card .card-title {
+    margin: 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p.card-text {
+    margin: 34px;
+}
+
 .nav-wrapper {
     background-color: #066163;
 
@@ -76,6 +90,7 @@ nav ul a {
       blink-caret .75s step-end infinite;
 }
 .examples {
+    height:24rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

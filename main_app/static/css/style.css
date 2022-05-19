@@ -296,6 +296,16 @@ nav ul a {
     border-radius: 25px;
    
 }
+#Comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #D0C9C0;
+    border: 2px solid #EFEAD8;
+    border-radius: 25px;
+    padding-bottom: 200px;
+}
 @keyframes typing {
     from { width: 0% }
     to { width: 100% }

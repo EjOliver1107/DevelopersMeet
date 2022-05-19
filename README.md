@@ -1,5 +1,8 @@
+<div align="center">
+   <img width="1059" alt="Screen Shot 2022-05-19 at 7 10 17 PM" src="https://user-images.githubusercontent.com/101842750/169418819-3b684ca7-b704-4fc1-bdb1-b235b6f0ab64.png">
+   <h1 align="center"></h1>
+</div>
 
-Developers Meet App
 
 <div align="center">
    <h1>:cupid: :heart_eyes: Developers Meet App :cupid: :heart_eyes: </h1>
@@ -14,6 +17,7 @@ Developers Meet App
    <a href="ej.oliver1107@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-ej.oliver1107@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
+   <br/>
    <a href="https://github.com/sophiabest" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:https://github.com/sophiabest-darkgreen?style=flat&logo=medium"/>
    </a>
@@ -24,6 +28,7 @@ Developers Meet App
    <a href="bestsophia1014@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-bestsophia1014@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
+   <br/>
    <a href="https://github.com/smansfield5-darkgreen" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/smansfield5-darkgreen?style=flat&logo=medium"/>
    </a>
@@ -33,11 +38,12 @@ Developers Meet App
    <a href="scottapps07@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-scottapps07@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
+   <br/>
     <a href="https://github.com/Hernandez-G" target="_blank">
-      <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/Hernandez-G-darkgreen?style=flat&logo=medium"/>
+      <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/HernandezG-darkgreen?style=flat&logo=medium"/>
    </a>
-   <a href="https://www.linkedin.com/in/gaby-hernandez-a49616235/" target="_blank">
-      <img src="https://img.shields.io/badge/-https://www.linkedin.com/in/gaby-hernandez-a49616235/-blue?style=flat&``logo=Linkedin&logoColor=white">
+   <a href="www.linkedin.com/in/gabyhernandez3" target="_blank">
+      <img src="https://img.shields.io/badge/-www.linkedin.com/in/gabyhernandez3-blue?style=flat&``logo=Linkedin&logoColor=white">
    </a> 
    <a href="Hernandez2gab@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-Hernandez2gab@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
@@ -118,7 +124,7 @@ Screenshots
 
 <details open>   
 <summary>Deployed Link (Heroku)</summary>
-<a href="https://developersmeet-sei.herokuapp.com/">https://meetyourclassmates.herokuapp.com/</a>
+<a href="https://developersmeet-sei.herokuapp.com/">https://developersmeet-sei.herokuapp.com</a>
 </details>
 
 ## :fast_forward: Next Steps   

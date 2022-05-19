@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<h1>About Developers Meet</h1>
-
-<div class="card-about" style="width: 14rem; height:30rem">
-    <div class="card-body">
-      <h5 class="card-title">Testing developer.</h5>
-      <p class="card-text-content"> title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-
+<div class="aboutStuff">
+<h1>So You want to join DevelopersMeet?</h1>
+<p>There are a ton of different dating apps and site you can choose from, lets be honest.
+ <br> However, if you join DevelopersMeet you're sure to find other software developers who suit your interest.
+  <br>You know, since thats what we're all about! <br>Hope you have fun finding your match.
+</p>
+<button ><a href="{% url 'profiles_create' %}">Join</a></button>
+</div>
 {% endblock %}

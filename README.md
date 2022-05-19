@@ -14,6 +14,7 @@ Developers Meet App
    <a href="ej.oliver1107@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-ej.oliver1107@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
+   <br/>
    <a href="https://github.com/sophiabest" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:https://github.com/sophiabest-darkgreen?style=flat&logo=medium"/>
    </a>
@@ -24,6 +25,7 @@ Developers Meet App
    <a href="bestsophia1014@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-bestsophia1014@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
+   <br/>
    <a href="https://github.com/smansfield5-darkgreen" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/smansfield5-darkgreen?style=flat&logo=medium"/>
    </a>
@@ -33,6 +35,7 @@ Developers Meet App
    <a href="scottapps07@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/-scottapps07@gmail.com-c14438?style=flat&logo=Gmail&``logoColor=white">
    </a>
+   <br/>
     <a href="https://github.com/Hernandez-G" target="_blank">
       <img src="https://img.shields.io/badge/-Portfolio:_https://github.com/Hernandez-G-darkgreen?style=flat&logo=medium"/>
    </a>

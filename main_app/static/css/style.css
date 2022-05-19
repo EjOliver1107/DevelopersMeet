@@ -207,14 +207,21 @@ nav ul a {
     background-color: #6d8b74;
 
 }
-.page-footer >
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .aboutStuff {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: #D0C9C0;
     padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .aboutStuff > p {
     font-size: 25px;
@@ -305,6 +312,30 @@ nav ul a {
     border: 2px solid #EFEAD8;
     border-radius: 25px;
     padding-bottom: 200px;
+}
+#match-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#potentialmatchbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+#potentialmatchbar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#potentialmatchbar-content > p , span {
+    color: #fefefe;
 }
 @keyframes typing {
     from { width: 0% }

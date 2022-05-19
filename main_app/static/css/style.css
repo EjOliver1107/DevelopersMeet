@@ -14,7 +14,7 @@ h1 {
     display: flex;
     overflow-x: auto;
   }
-  
+
   .card-body {
       display: flex;
       text-align: center;
@@ -97,6 +97,24 @@ h1 {
     60%, 85%{left: -200%}
 }
 
+/* card2 */
+.card2 {
+    background-color: #708572;
+    max-height: 250px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .card-body3 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* animation: slider 15s infinite; */
+
+}
 /* end */
 
 .nav-wrapper {
@@ -104,10 +122,14 @@ h1 {
     
 }
 nav .brand-logo{
-    color: #D0C9C0;}
-nav ul a {
-    color: #D0C9C0;;
+    color: #D0C9C0;
 }
+
+nav ul a {
+    padding: 0 20px;
+    color: #D0C9C0;
+}
+
 .right {
     color: #D0C9C0;
 }

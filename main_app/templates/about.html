@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<section id="about">
 <div class="aboutStuff">
 <h1>So You want to join DevelopersMeet?</h1>
 <p>There are a ton of different dating apps and site you can choose from, lets be honest.
  <br> However, if you join DevelopersMeet you're sure to find other software developers who suit your interest.
   <br>You know, since thats what we're all about! <br>Hope you have fun finding your match.
 </p>
-<button ><a href="{% url 'profiles_create' %}">Join</a></button>
+{% if user.is_authenticated %}
+<button ><a href="{% url 'index' %}">Join Us</a></button>
+{% else %}
+<button ><a href="{% url 'signup' %}">Join Us</a></button>
+{% endif %}
 </div>
+</section>
 {% endblock %}

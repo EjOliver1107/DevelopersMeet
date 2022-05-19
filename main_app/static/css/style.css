@@ -98,12 +98,17 @@ nav ul a {
     color:#5F7161;
 }
 .page-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     bottom: 0;
     position: fixed;
     width: 100%;
+    height: 30px;
     background-color: #6d8b74;
 
 }
+.page-footer >
 .aboutStuff {
     display: flex;
     flex-direction: column;
@@ -131,6 +136,66 @@ nav ul a {
 }
 .aboutStuff > button > a:hover {
     color:rgba(0, 0, 0, 0.4);
+}
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-title {
+    background-color: #D0C9C0;
+    width: 350px;
+    border: 2px solid #EFEAD8;
+    border-radius: 25px;
+}
+#form-answers {
+    background-color: #D0C9C0;
+    width: 350px;
+    padding-bottom: 15px;
+    border: 2px solid #EFEAD8;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+#form-answers > div > p {
+    margin-top: 25px;
+}
+#form-details {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#CRUD {
+     margin-top: 15vh; 
+} 
+#edit {
+    margin-right: 20px;
+    background-color: #5F7161;
+    padding: 10px 25px 10px 25px;
+    text-align: center;
+    border: 2px solid #6d8b74;
+    border-radius: 35px;
+    color: white;
+}
+#delete {
+    background-color: #5F7161;
+    padding: 10px 25px 10px 25px;
+    text-align: center;
+    border: 2px solid #6d8b74;
+    border-radius: 35px;
+    color: white;
+
+}
+#image-border {
+    background-color: #D0C9C0;
+    border: 2px solid #EFEAD8;
+    border-radius: 25px;
+
+}
+#imageform {
+    background-color: #D0C9C0;
+    border: 2px solid #EFEAD8;
+    border-radius: 25px;
+   
 }
 @keyframes typing {
     from { width: 0% }

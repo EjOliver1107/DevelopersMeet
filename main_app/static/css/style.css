@@ -21,7 +21,7 @@ h1 {
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      animation: 7s slider linear 10s;
+      animation: 6s slider linear 10s;
 
       
   }
@@ -31,7 +31,7 @@ h1 {
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      animation: 6s slider linear 10s;
+      animation: 5.5s slider linear 10s;
       
     }
     .card-body2 {
@@ -110,7 +110,6 @@ h1 {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    /* animation: slider 15s infinite; */
 
 }
 /* end */
@@ -120,16 +119,16 @@ h1 {
     
 }
 nav .brand-logo{
-    color: #D0C9C0;
+    color: #f3ece3;
 }
 
 nav ul a {
     padding: 0 20px;
-    color: #D0C9C0;
+    color: #f3ece3;
 }
 
 .right {
-    color: #D0C9C0;
+    color: #f3ece3;
 }
 
 
@@ -183,16 +182,6 @@ nav ul a {
       typing 3.5s steps(40, end),
       blink-caret .75s step-end infinite;
 }
-/* .examples {
-    height:24rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    bottom: 0;
-    position: relative;
-    gap: 20px;
-    color:#5F7161;
-} */
 
 .page-footer {
     display: flex;
@@ -206,7 +195,7 @@ nav ul a {
 
 }
 .page-footer >
-.aboutStuff {
+.aboutStuff { 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -302,3 +291,6 @@ nav ul a {
     from, to { border-color: transparent }
     50% { border-color: orange; }
   }
+
+  /* find a match */
+

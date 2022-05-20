@@ -30,7 +30,7 @@
   {% for photo in profile.photo_set.all %}
   <img class="responsive-img card-panel" src="{{photo.url}}" alt="Profile photo" id="image-border">
   {% empty %}
-  <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+  <div class="card-panel teal-text center-align" id="noimage">No Photos Uploaded</div>
   {% endfor %}
   {% if profile.user == user %}
   <div>

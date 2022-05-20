@@ -3,11 +3,12 @@
 {% block content %}
 
 {% if object %}
-    <h1>Edit<span>{{ object.name }}</span></h1>
+<h1>Edit<span>{{ object.name }}</span></h1>
 {% else %}
-    <h1>Create Your Profile</h1>
+<h1>Create Your Profile</h1>
 {% endif %}
 
+<section id="userform">
 <form action="" method="POST">
     {% csrf_token %}
    <table>
@@ -15,5 +16,5 @@
    </table>
    <input type="submit" value="Finished!" class="btn">
 </form> 
-
+</section>
 {% endblock %}

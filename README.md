@@ -79,9 +79,12 @@ Screenshots
 | Description | Screenshot |
 |------------ | ------------|
 | <h3 align="center">Home Page</h3> | <img width="2240" alt="Screen Shot 2022-05-19 at 12 47 10 PM" src="https://user-images.githubusercontent.com/101842750/169354692-f3c54938-83f6-4d35-90ec-2bd3ff45b22e.png"> |
-| <h3 align="center">Sign up Page</h3> | <img width="2240" alt="Screen Shot 2022-05-19 at 12 47 17 PM" src="https://user-images.githubusercontent.com/101842750/169354708-3eda9a31-6844-49cb-ad21-62cedef2f0d8.png"> |
-| <h3 align="center">Log In Page</h3> | <img width="2240" alt="Screen Shot 2022-05-19 at 12 47 22 PM" src="https://user-images.githubusercontent.com/101842750/169354721-288442d7-3011-4444-9475-665f773c2cb3.png"> |
+| <h3 align="center">Sign up Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 9 59 54 AM" src="https://user-images.githubusercontent.com/101842750/169544304-c9fc9ac1-456a-4606-95a8-27f5c049ebc6.png"> |
+| <h3 align="center">Create Profile Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 10 02 16 AM" src="https://user-images.githubusercontent.com/101842750/169544540-e66e0d23-dee1-4649-90d4-9efe4c83461d.png"> |
+| <h3 align="center">Profile Page</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 10 00 47 AM" src="https://user-images.githubusercontent.com/101842750/169544569-33e8b6d0-b85c-4fae-9635-7ea77edb823e.png"> |
+| <h3 align="center">Potential Matches</h3> | <img width="2236" alt="Screen Shot 2022-05-20 at 10 00 24 AM" src="https://user-images.githubusercontent.com/101842750/169544622-cc21845a-3087-43bd-89c8-1d22bd314de6.png"> |
 </details>
+   
 
 ## :computer: Technologies Used
 

@@ -6,7 +6,30 @@ h1 {
     text-align: center;
 }
 
-/* start */
+#signup {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6d8b74;
+    width: 450px;
+    padding: 10px;
+    border: 5px solid #EFEAD8;
+    border-radius: 25px;
+}
+#signup-info {
+    color: white;
+}
+p > label {
+    color:white;
+}
+.btn {
+    background-color: #D0C9C0;
+    font-size: 20px;
+}
+.btn:hover {
+    background-color: black;
+}
 .card {
     background-color: #708572;
     max-height: 250px;
@@ -194,14 +217,23 @@ nav ul a {
     background-color: #6d8b74;
 
 }
-.page-footer >
-.aboutStuff { 
+
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutStuff {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: #D0C9C0;
     padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .aboutStuff > p {
     font-size: 25px;
@@ -282,6 +314,40 @@ nav ul a {
     border: 2px solid #EFEAD8;
     border-radius: 25px;
    
+}
+#Comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #D0C9C0;
+    border: 2px solid #EFEAD8;
+    border-radius: 25px;
+    padding-bottom: 200px;
+}
+#match-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#potentialmatchbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+#potentialmatchbar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#potentialmatchbar-content > p , span {
+    color: #fefefe;
 }
 @keyframes typing {
     from { width: 0% }

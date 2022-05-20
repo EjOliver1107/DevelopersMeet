@@ -4,11 +4,11 @@
 <h1>Sign Up</h1>
 
 {% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
-
-<form method="POST" action="{% url 'signup' %}">
+<section id="signup">
+<form method="POST" action="{% url 'signup' %}" id="signup-info">
   {% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" class="btn" value="signup">
+  <input type="submit" class="btn" value="signup" id="inputbtn">
 </form>
-
+</section>
 {% endblock %}
